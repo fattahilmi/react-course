@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+// import state
+import { useState, useEffect } from 'react'; 
 import './App.css';
 
-function App() {
+const Person = (props) => {
+  return (
+    <>
+      <h1>Name: {props.name}</h1>
+      <h2>Last Name: {props.lastName}</h2>
+      <h2>Age: {props.age}</h2>
+    </>
+  )
+}
+
+// function App() {
+const App = () => {
+  const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    alert(`You've changed the counter to ${counter}`);
+  }, [counter]);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => setCounter((prevCount) => prevCount - 1)}>-</button>
+      <h1>{counter}</h1>
+      <button onClick={() => setCounter((prevCount) => prevCount + 1)}>+</button>
+
+      {/* <Person 
+        name="John" 
+        lastName={"Doe"} 
+        age={13}/>
+      <Person name={"Jane"} lastName="Marry" age={2+2} /> */}
     </div>
   );
 }

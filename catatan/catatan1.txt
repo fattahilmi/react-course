@@ -1,0 +1,33 @@
+step:
+- konsep pengertian dll
+- create first reactjs app
+- learn about jsx (core react syntax)
+- learn best file & folder structure
+
+react: front end js lib for building UI, developed by facebook
+- competitor angular and vue
+
+react use virtualDOM (JS object), much faster than updating real DOM 
+
+reactjs is a component-based fe lib, divided by small components, independen and reusable components
+2 tipe component:
+- functional (import React -> create const and arrow func -> return html(JSX))
+- class-based (jarang dipake)
+
+react enc setup: using the create-react-app 
+
+npm start, run di local
+
+all the logic ada di src folder
+
+ada perbedaan html dan jsx, di file App.js itu JSX, bisa akses variable di JSX
+
+<></> => merupakan react fragment
+
+props component saling bertukar data, setiap komponen punya builtin props
+
+state in react, plain js object, component
+
+react hooks, useState, useEffect, useContext
+
+useEffect allows us to do something on some kind of effects
